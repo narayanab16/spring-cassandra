@@ -3,6 +3,8 @@ package com.narayana;
 import com.narayana.model.Customer;
 import com.narayana.model.Result;
 import com.narayana.service.CustomerService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -14,6 +16,7 @@ import java.util.List;
 
 @SpringBootApplication
 public class CassandraDBApplication implements CommandLineRunner {
+    private Logger LOG = LoggerFactory.getLogger(this.getClass());
     @Autowired
     private CustomerService customerService;
 
@@ -39,9 +42,9 @@ public class CassandraDBApplication implements CommandLineRunner {
         }
         Boolean status = customerService.saveOrUpdate(customerList);
         if(status)
-            System.out.println(" Bulk save - success");
+            LOG.info(" Bulk save - success");
         else
-            System.out.println(" Bulk save - failed");
+            LOG.info(" Bulk save - failed");
     }
 
 

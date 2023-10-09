@@ -11,7 +11,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-import static org.apache.logging.log4j.ThreadContext.isEmpty;
 
 @RestController
 public class CustomerController {
