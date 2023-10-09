@@ -3,6 +3,8 @@ java + spring boot + spring data cassandra
 
 -  Prereqs: Java 18, IntelliJ/Eclipse, Git
 -  CassandraDBApplication - run java app
+-  Use docker and follow steps from **resources/cassandra_docker_cql.txt**
+-  I have created **linux OSimage video with docker installed** and you can setup any software
 
 Create a customer REST API, I used **postman**
 - HTTP method: POST
