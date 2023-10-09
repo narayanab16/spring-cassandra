@@ -2,7 +2,7 @@
 java + spring boot + spring data cassandra 
 
 -  Prereqs: Java 18, IntelliJ/Eclipse, Git
--  SpringReactiveApplication - run java app
+-  CassandraDBApplication - run java app
 
 Create a customer REST API, I used **postman**
 - HTTP method: POST
