@@ -10,13 +10,17 @@ Create a customer REST API, I used **postman**
 - Header: Content-Type: application/json
 - raw Body: {"id":"100","customername":"Narayana100","address":"address100"}
 
-Get customer REST API:
+Get customer REST API (one customer):
 - http://localhost:10000/getCustomerById/28
+
+Get customer REST API(A customer with compound key data)
+- http://localhost:10000/getCustomerFullDataById/28
 
 Update customer REST API:
 - http://localhost:10000/updateCustomerById/28/Narayana-testing
 
 Delete customer REST API:
-- http://localhost:10000/updateCustomerById/{id}
+- http://localhost:10000/updateCustomerById/28
 
-
+Aggregate REST API:
+- http://localhost:10000/aggregateByCustomer/Narayana

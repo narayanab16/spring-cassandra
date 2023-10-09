@@ -8,6 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 import static org.apache.logging.log4j.ThreadContext.isEmpty;
@@ -46,6 +47,11 @@ public class CustomerController {
         customerService.saveOrUpdate(Arrays.asList(customer));
 
         return " customer : " + customer.customername() + " added";
+    }
+
+    @GetMapping(value = "/getCustomerFullDataById/{id}")
+    public List<Customer> getCustomerFullDataById(@PathVariable String id) {
+        return customerService.getCustomerFullDataById(id);
     }
 
 }
