@@ -33,7 +33,7 @@ public class CustomerController {
     @GetMapping(value = "/updateCustomerById/{id}/{cust_name}")
     public String updateCustomerById(@PathVariable String id, @PathVariable String cust_name) {
         customerService.updateCustomerById(id, cust_name);
-        return " customer id : " + id + " deleted";
+        return " customer id : " + id + " updated";
     }
     @GetMapping(value = "/getCustomerById/{id}")
     public Customer getCustomerById(@PathVariable String id) {
