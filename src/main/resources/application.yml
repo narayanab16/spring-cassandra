@@ -1,0 +1,6 @@
+debug: false
+server:
+  port: 10000
+spring:
+  application:
+    name: spring-cassandra
